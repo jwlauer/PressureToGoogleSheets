@@ -13,6 +13,8 @@ The code assumes all sensors are wired to the same I2C bus using:
 ::
   SDA --> Pin 21
   SCL --> Pin 22
+  VCC --> 3V
+  GND --> GND
 
 The code uses pin 15 to wake the ESP32 from deep sleep. Proper functionality may require adding a weak external pullup resistor (e.g., 100K) to pin 15.
 
