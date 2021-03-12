@@ -5,7 +5,7 @@ This repository includes code for developing a wifi-enabled differential pressur
 
 The logging program saves data to an SD card or flash memory on the Lolin D32 Pro and attempts to post the data to a Google Sheet using a separate Google Apps script.  The Google Apps script is coded in javascript and must be deployed using a valid Google account. Appropriate API Keys must updated in the file logger_google_sheets.py.
 
-The easiest way to deploy the code is to copy all *.py files in the repository to the Lolin D32 Pro using an IDE like Thonny.  Thonny can also be used to install the correct version of MicroPython on the ESP32. 
+The easiest way to deploy the code is to copy all *.py files in the repository to the Lolin D32 Pro using an IDE like `Thonny <https://thonny.org/>`__.  Thonny can also be used to install the correct version of MicroPython on the ESP32. 
 
 Wiring
 ------
@@ -14,5 +14,5 @@ The code assumes all sensors are wired to the same I2C bus using:
   SDA --> Pin 21
   SCL --> Pin 22
 
-
+The code uses pin 15 to wake the ESP32 from deep sleep. Proper functionality may require adding a weak external pullup resistor (e.g., 100K) to pin 15.
 
