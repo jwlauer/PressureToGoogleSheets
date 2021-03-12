@@ -15,12 +15,12 @@ Be sure to set the correct SSID, password, and apikey.
 """
 
 import machine, utime, esp, esp32, urequests, usocket, network, uos
-import bme280, ms5803, direct_to_google_sheet
+import bme280, ms5803, post_to_google_sheet
 from machine import Pin
 
 def log():
     import machine, utime, esp, esp32, urequests, usocket, network, uos
-    import bme280, ms5803, direct_to_google_sheet
+    import bme280, ms5803, post_to_google_sheet
     from machine import Pin
 
     led = Pin(5, Pin.OUT)
@@ -147,7 +147,7 @@ def log():
     data['Battery'] = battery
 
     #Send data to Google Sheet
-    result = direct_to_google_sheet.send_to_sheet(ssid, password, gKey, gSheetKey, data)
+    result = post_to_google_sheet.send_to_sheet(ssid, password, gKey, gSheetKey, data)
     print(result)
 
     #turn off wifi to lower power when in sleep mode
