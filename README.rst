@@ -16,3 +16,9 @@ The code assumes all sensors are wired to the same I2C bus using:
 
 The code uses pin 15 to wake the ESP32 from deep sleep. Proper functionality may require adding a weak external pullup resistor (e.g., 100K) to pin 15.
 
+Breakout modules for the BMP/BME280 and DS3231 RTC are readily available. While breakout modules for the MS5803 are also commercially available, they can be too large for practical incorporation in a submersible pressure sensor. I've laid out a `small custom PCB <https://github.com/jwlauer/CTD/tree/master/hardware/MS5803>`__ that can simplify wiring and allows the sensor to be installed inside standard 1-inch PVC pipe.  The I2C address of the MS5803 must be set to 0x76 using an appropriate solder bridge. Instructions for using the MS5803 with a small generic PCB are available at the `Cave Pearl Project <https://thecavepearlproject.org/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/>`__.
+
+Acknowledgements
+----------------
+
+The code uses the `prerequests.py <https://gist.github.com/SpotlightKid/8637c685626b334e5c0ec341dd269c44>`__ library, the `BME280.py <https://forum.micropython.org/viewtopic.php?f=14&t=1315&start=30>`__ library, and AdaFruit's `urtc.py <https://github.com/adafruit/Adafruit-uRTC>`__ library.  The `MS5803-05BA.py <https://github.com/ControlEverythingCommunity/MS5803-05BA/blob/master/Python/MS5803_05BA.py>`__ library was modified for use with micropython. The javascript code is based on this `Google App Scripts example <https://rntlab.com/question/send-sensor-reading-via-email-in-micropython-directly-to-google-sheet-page-191/>`__.  
