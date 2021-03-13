@@ -9,7 +9,7 @@ The easiest way to deploy the code is to copy all *.py files in the repository t
 
 Wiring
 ------
-The code assumes all sensors are wired to the same I2C bus using:
+The code assumes all sensors as well as the DS3231 RTC are wired to the same I2C bus using:
 ::
   SDA --> Pin 21
   SCL --> Pin 22
