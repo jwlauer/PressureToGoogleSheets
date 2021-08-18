@@ -38,7 +38,7 @@ def log():
 
     #declare global login variables
     ssid = "Sensors"
-    password = "ENSC_2400"
+    password = "XXXXX"
     gKey = "AKfycbwAJbCuZfNzar00oHPd3CZ8Hzn9c79LfUU5lg8u0p9kAxiGyetqGqWJ"
     gSheetKey = "1AIWnPTtGNdlZ1TfbzpGTnheCOrPnKUHLUVefa8i2Y8k"
 
