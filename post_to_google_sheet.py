@@ -21,10 +21,10 @@ def send_to_sheet(ssid, password, gKey, gSheetKey, data):
     Example
     -------
     >>> import direct_to_google_sheet
-    >>> ssid = "Anduin"
-    >>> password ="Johnny_1002"
-    >>> gKey = "AKfycbwAJbCuZfNzar00oHPd3CZ8Hzn9c79LfUU5lg8u0p9kAxiGyetqGqWJ"
-    >>> gSheetKey = "1AIWnPTtGNdlZ1TfbzpGTnheCOrPnKUHLUVefa8i2Y8k"
+    >>> ssid = "YourSSID"
+    >>> password ="YourPassword"
+    >>> gKey = "YourgKey"
+    >>> gSheetKey = "YourGSheetKey"
     >>> d1 = 121
     >>> d2 = 232
     >>> d3 = 434
